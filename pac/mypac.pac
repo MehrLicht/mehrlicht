@@ -1,6 +1,6 @@
 // http://pac.itzmx.com
 
-var proxy = "PROXY 192.168.31.239:9527;";
+var proxy = "PROXY 192.168.31.215:9527;";
 
 var domains = {
   "pinterest.com": 1,
@@ -2607,7 +2607,7 @@ var hasOwnProperty = Object.hasOwnProperty;
 
 function FindProxyForURL(url, host) {
     if (host == "www.so.com") {
-        return "PROXY 192.168.31.239:9527";
+        return "PROXY 192.168.31.215:9527";
     }
 
     var suffix;
@@ -2616,7 +2616,7 @@ function FindProxyForURL(url, host) {
         suffix = host.substring(pos + 1);
         if (suffix == "360.cn")
             if (url.indexOf('http://') == 0)
-                return "PROXY 192.168.31.239:9527";
+                return "PROXY 192.168.31.215:9527";
         if (hasOwnProperty.call(domains, suffix)) {
             return proxy;
         }
